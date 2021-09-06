@@ -1,9 +1,10 @@
+/* --- Universal Styling ------------------------------ */
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
-
 textarea {
   background: transparent;
   border-left: 1px solid black;
@@ -13,6 +14,8 @@ textarea {
   resize: none;
 }
 
+/* --- Header ----------------------------------------- */
+
 .jumbotron {
   background-color: transparent;
   border-bottom: 10px solid black;
@@ -21,21 +24,17 @@ textarea {
   text-align: center;
 }
 
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  border-radius: 15px;
-  text-align: center;
-}
+/* --- Time Block Elements ---------------------------- */
 
 .row {
   border-top: 1px solid white;
   height: 80px;
   white-space: pre-wrap;
 }
-
+.time-block {
+  border-radius: 15px;
+  text-align: center;
+}
 .hour {
   align-items: center;
   background-color: #ffffff;
@@ -44,31 +43,49 @@ textarea {
   display: flex;
   justify-content: center;
 }
-
+.description {
+  white-space: pre-wrap;
+}
 .past {
   background-color: #d3d3d3;
   color: white;
 }
-
 .present {
   background-color: #ff6961;
   color: white;
 }
-
 .future {
   background-color: #77dd77;
   color: white;
 }
-
 .saveBtn {
-  background-color: #06AED5;
+  background-color: #9756ac;
   border-bottom-right-radius: 15px;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   color: white;
 }
-
+.saveBtn:hover {
+  background-color: #6b3c7a;
+}
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+/* --- Media Queries ---------------------------------- */
+
+@media screen and (max-width: 575px) {
+  .row {
+    margin: 0;
+  }
+  .hour {
+    width: 15%;
+  }
+  .description {
+    width: 70%;
+  }
+  .saveBtn {
+    width: 15%;
+  }
 }
